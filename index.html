@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🇮🇩 SFX MPlayerPlaySF</title>
+
+    <!-- CSS eksternal untuk styling -->
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+
+  <body>
+    <!-- Judul utama aplikasi -->
+    <h1 class="judul">🇮🇩 SFX MPlayer</h1>
+
+    <!-- Area kontrol utama player -->
+    <div class="mplayer">
+      <div class="controls">
+        <!-- Tombol play/pause -->
+        <button id="toggleBtn">▶️ Play</button>
+
+        <!-- Tombol stop -->
+        <button id="stopBtn">⏹️ Stop</button>
+
+        <!-- Tombol toggle loop -->
+        <button id="loopToggle" class="toggle-button">🔁 Loop</button>
+
+        <!-- Slider kontrol volume -->
+        <input
+          type="range"
+          id="volumeControl"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1"
+        />
+      </div>
+
+      <!-- Progress bar durasi audio -->
+      <input type="range" id="progressBar" value="0" min="0" step="0.1" />
+
+      <!-- Menampilkan info lagu yang sedang diputar -->
+      <p id="nowPlaying">Tidak ada suara diputar.</p>
+
+      <!-- Elemen audio utama -->
+      <audio id="mainAudio"></audio>
+    </div>
+
+    <!-- Input pencarian SFX secara realtime -->
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="🔍 Cari SFX..."
+      class="search-box"
+    />
+
+    <!-- Tempat untuk menampilkan semua tombol SFX (diisi lewat JavaScript) -->
+    <div class="sfx-grid" id="sfxGrid">
+      <!-- Tombol-tombol akan dibuat otomatis dari JS -->
+    </div>
+
+    <!-- Footer hak cipta -->
+    <footer id="footer">
+      &copy; 2025 Faizal Dwi Al Farizi — Made with 🔥 and 🎧 in PlaySF (player
+      SFX)
+    </footer>
+
+    <!-- Skrip JavaScript eksternal -->
+    <script src="assets/script.js"></script>
+  </body>
+</html>
